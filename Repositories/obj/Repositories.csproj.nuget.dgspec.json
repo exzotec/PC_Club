@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\daniil\\Desktop\\ApiComputerClub\\PC_Club\\PC_Club\\PC_Club.csproj": {}
+    "C:\\Users\\daniil\\Desktop\\ApiComputerClub\\PC_Club\\Repositories\\Repositories.csproj": {}
   },
   "projects": {
-    "C:\\Users\\daniil\\Desktop\\ApiComputerClub\\PC_Club\\PC_Club\\PC_Club.csproj": {
+    "C:\\Users\\daniil\\Desktop\\ApiComputerClub\\PC_Club\\Repositories\\Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\daniil\\Desktop\\ApiComputerClub\\PC_Club\\PC_Club\\PC_Club.csproj",
-        "projectName": "PC_Club",
-        "projectPath": "C:\\Users\\daniil\\Desktop\\ApiComputerClub\\PC_Club\\PC_Club\\PC_Club.csproj",
+        "projectUniqueName": "C:\\Users\\daniil\\Desktop\\ApiComputerClub\\PC_Club\\Repositories\\Repositories.csproj",
+        "projectName": "Repositories",
+        "projectPath": "C:\\Users\\daniil\\Desktop\\ApiComputerClub\\PC_Club\\Repositories\\Repositories.csproj",
         "packagesPath": "C:\\Users\\daniil\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\daniil\\Desktop\\ApiComputerClub\\PC_Club\\PC_Club\\obj\\",
+        "outputPath": "C:\\Users\\daniil\\Desktop\\ApiComputerClub\\PC_Club\\Repositories\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\daniil\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,13 +40,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+            "Microsoft.AspNetCore.Mvc.Core": {
               "target": "Package",
-              "version": "[6.0.6, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[6.0.6, )"
+              "version": "[2.2.5, )"
             }
           },
           "imports": [
@@ -60,9 +56,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

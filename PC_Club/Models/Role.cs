@@ -2,7 +2,13 @@
 {
     public class Role
     {
-        public Guid roleId { get; set; }
+        public int roleId { get; set; }
         public string roleName { get; set; }
+
+        public List<User> Users { get; set; }
+        public Role()
+        {
+            Users = new List<User>();
+        }
     }
 }

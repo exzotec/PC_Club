@@ -1,6 +1,7 @@
-var builder = WebApplication.CreateBuilder(args);
-var app = builder.Build();
+using Microsoft.AspNetCore.Authorization;
 
-app.MapGet("/", () => "Hello World!");
+var builder = WebApplication.CreateBuilder();
+
+var app = builder.Build();
 
 app.Run();

@@ -7,11 +7,12 @@
         public string? middle_name { get; set; }
         public string last_name { get; set; }
         public string login { get; set; }
-        private string password { get; set; }
+        public string password { get; set; }
         public string e_mail { get; set; }
         public string phone_number { get; set; }
         public DateTime birthday { get; set; }
 
-        public Role roleId { get; set; }
+        public int? roleId { get; set; }
+        public Role Role { get; set; }
     }
 }
