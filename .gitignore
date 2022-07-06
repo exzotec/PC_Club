@@ -1,5 +1,6 @@
 appsettings.json
-/vs
+AuthOption
+/.vs
 /Properties
 /bin
 /obj
