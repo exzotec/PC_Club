@@ -1,4 +1,8 @@
-﻿namespace PC_Club.Models
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Security.Claims;
+
+namespace PC_Club.Models
 {
     public class User
     {
@@ -12,7 +16,14 @@
         public string phone_number { get; set; }
         public DateTime birthday { get; set; }
 
-        public int? roleId { get; set; }
-        public Role Role { get; set; }
+        public IEnumerable<string> Roles { get; set; }
+
+        public IEnumerable<Claim> Claims()
+        {
+            var claims = new List<Claim> { new Claim(ClaimTypes.Name, login) };
+            claims.AddRange(Roles.Select(role => new Claim(ClaimTypes.Role, role)));
+
+            return claims;
+        }
     }
 }

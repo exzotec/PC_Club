@@ -17,6 +17,16 @@ namespace PC_Club.Data
         {
             //modelBuilder.HasDefaultSchema("Api");
             //base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Role>().HasData(
+                   new Role { roleId = 1, roleName = "SuperAdmin" },
+                   new Role { roleId = 2, roleName = "ClubAdmin"},
+                   new Role { roleId = 3, roleName = "SiteAdmin"},
+                   new Role { roleId = 4, roleName = "Auditor"},
+                   new Role { roleId = 5, roleName = "Client"},
+                   new Role { roleId = 6, roleName = "Manager"},
+                   new Role { roleId = 7, roleName = "Support"},
+                   new Role { roleId = 8, roleName = "Analyst"});
         }
     }
 }

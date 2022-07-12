@@ -4,7 +4,7 @@ using PC_Club.Data;
 using PC_Club.Data.Interface;
 using PC_Club.Models;
 
-namespace PC_Club.Repositories.Repositories
+namespace PC_Club.Repositories
 {
 
     internal class UserRepository : IBaseRepository<User>

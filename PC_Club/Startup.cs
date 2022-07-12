@@ -1,5 +1,6 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
+using PC_Club.Extensions;
+using PC_Club.Services;
+using PC_Club.Repositories;
 
 namespace PC_Club
 {
@@ -16,32 +17,22 @@ namespace PC_Club
         {
             //string connection = Configuration.GetConnectionString("DefaultConnection");
             //services.AddDbContext<DataContext>(options =>
-               //options.UseNpgsql(connection));
+            //options.UseNpgsql(connection));
 
-            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                    .AddJwtBearer(options =>
-                    {
-                        options.RequireHttpsMetadata = false;
-                        options.TokenValidationParameters = new TokenValidationParameters
-                        {
-                            // укзывает, будет ли валидироваться издатель при валидации токена
-                            ValidateIssuer = true,
-                            // строка, представляющая издателя
-                            ValidIssuer = AuthOption.ISSUER,
+            services.AddControllers()
+                .AddNewtonsoftJson(options =>
+                {
+                    options.SerializerSettings.ReferenceLoopHandling =
+                        ReferenceLoopHandling.Ignore;
+                });
 
-                            // будет ли валидироваться потребитель токена
-                            ValidateAudience = true,
-                            // установка потребителя токена
-                            ValidAudience = AuthOption.AUDIENCE,
-                            // будет ли валидироваться время существования
-                            ValidateLifetime = true,
+            services.AddAsymmetricAuthentication();
 
-                            // установка ключа безопасности
-                            IssuerSigningKey = AuthOption.GetSymmetricSecurityKey(),
-                            // валидация ключа безопасности
-                            ValidateIssuerSigningKey = true,
-                        };
-                    });
+            services.AddTransient<AuthenticationService>();
+            services.AddTransient<UserService>();
+            services.AddTransient<TokenService>();
+            services.AddTransient<UserRepository>();
+
             services.AddControllersWithViews();
         }
 
@@ -53,9 +44,6 @@ namespace PC_Club
             }
 
             app.UseStatusCodePages("text/plain", "Error. Status code : {0}");
-
-            app.UseDefaultFiles();
-            app.UseStaticFiles();
 
             app.UseRouting();
 
