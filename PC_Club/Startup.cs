@@ -1,7 +1,7 @@
 using PC_Club.Extensions;
 using PC_Club.Services;
 using PC_Club.Repositories;
-using Newtonsoft.Json;
+using System.Text.Json;
 
 namespace PC_Club
 {
@@ -21,10 +21,10 @@ namespace PC_Club
             //options.UseNpgsql(connection));
 
             services.AddControllers()
-                .AddNewtonsoftJson(options =>
+                .AddJsonOptions(options =>
                 {
-                    options.SerializerSettings.ReferenceLoopHandling =
-                        ReferenceLoopHandling.Ignore;
+                    options.JsonSerializerOptions.ReferenceHandler =
+                        System.Text.Json.Serialization.ReferenceHandler.IgnoreCycles;
                 });
 
             services.AddAsymmetricAuthentication();

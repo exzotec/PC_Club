@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "btu9tcfAW6CQy59G1bpeKeT6zzDBx09L5lsm/yrNQKJsghs+jeO0M09803zImfE8r33kUr0CoOmZbMWC/U0HUQ==",
+  "dgSpecHash": "FZWeP8toRLq+lE6VY7kYOFwUPcIoy6XL9s4elAZ0DnpOvu5nIWKyB1d3MgaJghL3a9iB13/jSmscyXyrMGXF/w==",
   "success": true,
   "projectFilePath": "C:\\Users\\daniil\\Desktop\\ApiComputerClub\\PC_Club\\PC_Club\\PC_Club.csproj",
   "expectedPackageFiles": [
@@ -22,7 +22,6 @@
     "C:\\Users\\daniil\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.10.0\\microsoft.identitymodel.protocols.6.10.0.nupkg.sha512",
     "C:\\Users\\daniil\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.10.0\\microsoft.identitymodel.protocols.openidconnect.6.10.0.nupkg.sha512",
     "C:\\Users\\daniil\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.10.0\\microsoft.identitymodel.tokens.6.10.0.nupkg.sha512",
-    "C:\\Users\\daniil\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\daniil\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\daniil\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
     "C:\\Users\\daniil\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.10.0\\system.identitymodel.tokens.jwt.6.10.0.nupkg.sha512",
