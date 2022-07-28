@@ -7,6 +7,7 @@ namespace PC_Club.Data
     {
         public DbSet<User> users { get; set; }
         public DbSet<Role> roles { get; set; }
+        public DbSet<Club> clubs { get; set; }
 
         public DataContext()
         {
@@ -27,6 +28,16 @@ namespace PC_Club.Data
                    new Role { roleId = 6, roleName = "Manager"},
                    new Role { roleId = 7, roleName = "Support"},
                    new Role { roleId = 8, roleName = "Analyst"});
+
+            modelBuilder.Entity<User>().HasData(
+                  new User
+                  {
+                      full_name = "Ivanov Ivan Ivanovich",
+                      login = "ivan",
+                      password = "ivan",
+                      e_mail = "ivan@bk.ru",
+                      roleName = "SuperAdmin"
+                  });
         }
     }
 }

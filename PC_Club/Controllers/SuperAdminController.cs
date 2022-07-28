@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using PC_Club.Data;
 using PC_Club.Data.Interface;
 using PC_Club.Models;
-using PC_Club.Repositories.Repositories;
+using PC_Club.Repositories;
 
 namespace PC_Club.Controllers
 {
-    //[Authorize(Roles = "SuperAdmin")]
+    [Authorize(Roles = "SuperAdmin")]
     [ApiController]
     [Route("api/SA")]
     public class SuperAdminController : ControllerBase
@@ -28,7 +28,7 @@ namespace PC_Club.Controllers
 
         #region CRUD on User
 
-        [Route("GetAll")]
+        [Route("GetAllUsers")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<User>>> GetAll()
         {
@@ -49,10 +49,8 @@ namespace PC_Club.Controllers
             {
                 login = user.login,
                 password = user.password,
-                roleId = user.roleId,
-                first_name = user.first_name,
-                middle_name = user.middle_name,
-                last_name = user.last_name
+                role = user.role,
+                full_name = user.full_name,
             });
             dbUser.Save();
             return Ok(user);

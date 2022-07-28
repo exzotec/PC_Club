@@ -12,7 +12,7 @@ namespace PC_Club.Services
     public class TokenService
     {
         private readonly UserRepository userRepository;
-        private readonly SigningAudienceCertificate signingAudienceCertificate;
+        public readonly SigningAudienceCertificate signingAudienceCertificate;
 
         public TokenService(UserRepository userRepository)
         {

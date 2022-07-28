@@ -7,7 +7,7 @@ using PC_Club.Models;
 namespace PC_Club.Repositories
 {
 
-    internal class UserRepository : IBaseRepository<User>
+    public class UserRepository : IBaseRepository<User>
     {
         private DataContext dbUser;
 
