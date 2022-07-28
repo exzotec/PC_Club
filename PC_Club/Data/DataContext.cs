@@ -36,7 +36,7 @@ namespace PC_Club.Data
                       login = "ivan",
                       password = "ivan",
                       e_mail = "ivan@bk.ru",
-                      roleName = "SuperAdmin"
+                      //role = "SuperAdmin"
                   });
         }
     }

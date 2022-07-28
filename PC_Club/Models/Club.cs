@@ -8,6 +8,9 @@
 
         public Provider Provider { get; set; }
 
+        public int? TimetableID { get; set; }
         public Timetable Timetable { get; set; }
+
+        public Places Places { get; set; }  
     }
 }

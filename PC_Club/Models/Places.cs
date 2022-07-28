@@ -9,6 +9,10 @@
 
         public TablePlacement TablePlacement { get; set; }
 
+        public int? PeripheryId { get; set; }
         public Periphery Periphery { get; set; }
+        
+        public int? ClubId { get; set; }
+        public Club Club { get; set; }
     }
 }

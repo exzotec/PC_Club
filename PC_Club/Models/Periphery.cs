@@ -10,6 +10,10 @@
         public string Mouse { get; set; }
         public string Seat { get; set; }
 
-        public string StoryOfFix { get; set; }
+        public List<Places> Places { get; set; }
+        public Periphery()
+        {
+            Places = new List<Places>();
+        }
     }
 }

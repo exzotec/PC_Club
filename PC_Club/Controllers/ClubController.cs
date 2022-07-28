@@ -41,15 +41,13 @@ namespace PC_Club.Controllers
             if (club == null)
                 return BadRequest();
 
-            if (context.clubs.Any(x => x.Id == club.Id))
-                return BadRequest(new { errorText = "Этот клуб уже зарегестрирован" });
-
             dbClub.Create(new Club
             {
                 Address = club.Address,
                 Description = club.Description,
                 Provider = club.Provider,
                 Timetable = club.Timetable,
+                Places =club.Places,
             });
             dbClub.Save();
             return Ok(club);
